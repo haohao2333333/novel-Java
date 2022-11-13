@@ -1,0 +1,19 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: nas-user #指定服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    typee: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/novel_system?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 200451
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  #  config-location: classpath:mybatis/mybatis-config.xml
+  configuration:
+    map-underscore-to-camel-case: false  # 开启驼峰命名
