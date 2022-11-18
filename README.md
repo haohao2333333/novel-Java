@@ -1,6 +1,7 @@
 # novel-Java
 
-- 前端项目（更新中）：[GitHub](https://github.com/haohao2333333/novel-vue) ｜ [码云]()
+- 前台项目（更新中）：[GitHub](https://github.com/haohao2333333/novel-vue) ｜ [码云]()
+- 后台项目（更新中）：[GitHub](https://github.com/haohao2333333/novel-admin) ｜ [码云]()
 - 后端项目（更新中）：[GitHub](https://github.com/haohao2333333/novel-Java) ｜ [码云]()
 
 ## 进展
