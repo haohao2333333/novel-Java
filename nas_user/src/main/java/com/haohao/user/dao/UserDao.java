@@ -1,8 +1,12 @@
 package com.haohao.user.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.haohao.domain.user.User;
+import com.haohao.domain.user.SysUser;
+import org.apache.ibatis.annotations.Select;
 
-public interface UserDao extends BaseMapper<User> {
+public interface UserDao extends BaseMapper<SysUser> {
+
+    @Select("select * from user where username = #{username}")
+    public SysUser selectByUsername(String username);
 
 }

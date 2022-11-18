@@ -1,16 +1,15 @@
 package com.haohao.user.controller;
 
 import com.haohao.user.service.UserService;
-import com.haohao.domain.user.User;
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.haohao.domain.user.SysUser;
+import com.haohao.entity.Result;
+import com.haohao.entity.StatusCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @CrossOrigin
@@ -25,9 +24,9 @@ public class UserController {
      * 登录接口
      */
     @PostMapping("/login")
-    public Result login(){
-
-        return new Result(true, StatusCode.OK, "查询成功");
+    public Result login(@RequestBody SysUser sysUser){
+        Result login = userService.login(sysUser);
+        return new Result(true, StatusCode.OK, "登录成功",login);
     }
 
     /**
@@ -36,8 +35,8 @@ public class UserController {
      */
     @GetMapping
     public Result findAll() {
-        List<User> userList = userService.findAll();
-        return new Result(true, StatusCode.OK, "查询成功", userList);
+        List<SysUser> sysUserList = userService.findAll();
+        return new Result(true, StatusCode.OK, "查询成功", sysUserList);
     }
 
     /***
@@ -47,32 +46,58 @@ public class UserController {
      */
     @GetMapping("/{id}")
     public Result findById(@PathVariable Long id){
-        User user = userService.findById(id);
-        return new Result(true,StatusCode.OK,"查询成功",user);
+        SysUser sysUser = userService.findById(id);
+        return new Result(true,StatusCode.OK,"查询成功", sysUser);
     }
 
     /***
      * 新增数据
-     * @param user
+     * @param sysUser
      * @return
      */
     @PostMapping
-    public Result add(@RequestBody User user){
-        userService.add(user);
+    public Result add(@RequestBody SysUser sysUser){
+        userService.add(sysUser);
         return new Result(true,StatusCode.OK,"添加成功");
     }
 
     /***
      * 修改数据
-     * @param user
+     * @param sysUser
      * @param id
      * @return
      */
     @PutMapping(value="/{id}")
-    public Result update(@RequestBody User user,@PathVariable Long id){
-        user.setId(id);
-        userService.update(user);
+    public Result update(@RequestBody SysUser sysUser, @PathVariable Long id){
+        sysUser.setUser_id(id);
+        userService.update(sysUser);
         return new Result(true,StatusCode.OK,"修改成功");
+    }
+
+    /**
+     * 修改用户状态
+     * @param sysUser
+     * @param id
+     * @param state
+     * @return
+     */
+    @PutMapping(value="/{id}/{state}")
+    public Result updateState(@RequestBody SysUser sysUser, @PathVariable Long id, @PathVariable Integer state){
+        sysUser.setUser_id(id);
+        sysUser.setState(state);
+        userService.updateState(sysUser);
+        return new Result(true,StatusCode.OK,"修改成功");
+    }
+
+    /***
+     * 根据ID删除用户
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Long id){
+        userService.delete(id);
+        return new Result(true,StatusCode.OK,"删除成功");
     }
 
 }

@@ -1,6 +1,6 @@
 package com.haohao.user;
 
-import entity.IdWorker;
+import com.haohao.entity.IdWorker;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
