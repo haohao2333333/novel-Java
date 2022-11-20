@@ -47,7 +47,7 @@
 ***1.git 下载***
 
 ```
-git clone https://github.com/haohao2333333/novel-admin.git
+git clone https://github.com/haohao2333333/novel-Java.git
 ```
 
 ***2.直接下载***
