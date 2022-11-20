@@ -9,11 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>nas_common</module>
-        <module>nas_user</module>
-        <module>nas_novel</module>
-        <module>nas_video</module>
-        <module>nas_audio</module>
+        <module>nas-service</module>
+        <module>nas-gateway</module>
+        <module>nas-service-api</module>
+        <module>nas-commom-db</module>
+        <module>nas-common</module>
     </modules>
 
     <parent>
