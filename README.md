@@ -84,3 +84,12 @@ github code download
 
 1. 项目配置了swagger2
 2. 若要查看小说微服务的接口文档, 服务启动后在浏览器输入http://localhost:10087/doc.html即可, 其他服务亦是
+
+## 项目截图
+
+### 前台截图
+
+### 后台截图
+
+#### 登录截图
+![image](https://user-images.githubusercontent.com/117864397/202909250-8058ec2c-b476-4109-b07f-4e627ae30972.png)
