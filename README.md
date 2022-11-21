@@ -49,6 +49,9 @@
   - nas-video - 视频微服务
 - nas-service-api - 实体类模块
 
+## 系统架构
+![_6@WJ31)D5GT3 3_5ND{KD](https://user-images.githubusercontent.com/117864397/203068118-55d7353f-7913-4966-8faa-738107c690ee.png)
+
 ## 代码使用方法
 
 ### 1.拉取项目
