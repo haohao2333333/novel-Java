@@ -7,7 +7,7 @@
 ## 技术
 
 - 前端技术：Vue, vuex, element-plus, axios
-- 后端技术：Spring Boot, Mybatis-plus, pagehelper, Spring Security, swagger, Spring Cloud, Spring Cloud Alibaba, elasticsearch, redis
+- 后端技术：Spring Boot, Mybatis-plus, pagehelper, Spring Security, swagger, Spring Cloud, Spring Cloud Alibaba, elasticsearch, redis, 七牛云对象存储
 - 开发环境: Java 17, MySQL 8, node 16, Maven 3.8, redis 7,IDEA 2022(可选)
 
 ### 前端技术选型
